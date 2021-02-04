@@ -1,0 +1,4 @@
+#Ignoramos la carpeta node modules puesto que esta contiene todo nuestros paquetes y archivos de modulos 
+#asi que estos los podemos volver a instalar cuando clonemos el proyecto 
+
+node_modules
