@@ -1,1 +1,1 @@
-(()=>{"use strict";window.addEventListener("hashchange",(()=>{console.log(window.location.hash)}))})();
+(()=>{"use strict";window.addEventListener("hashchange",(()=>{(o=>{switch(window.location.hash){case"#/":return console.log("home");case"#/products":console.log("")}})()}))})();
