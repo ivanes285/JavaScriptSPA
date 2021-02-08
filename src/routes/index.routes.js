@@ -2,12 +2,16 @@
 //import Home from '../views/home'  
 
 //Esta es la segunda forma de importar en donde especifico lo que necesito
-import {home} from '../views/home'
+import {home} from '../controllers/index.controller'
+
 
 const router = (route) => {
+  //Formateamos para que no se recargue encima 
+  document.getElementById('root').innerHTML=``
   switch (route) {
     case "#/":{
-     document.getElementById('root').innerHTML+= home()
+     //document.getElementById('root').innerHTML+= Home()
+     document.getElementById('root').appendChild(home())
     }
     case "#/products":
       return console.log("products");
