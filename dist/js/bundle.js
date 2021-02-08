@@ -1,1 +1,1 @@
-(()=>{"use strict";document.getElementById("message").addEventListener("click",(()=>{alert("HOLA COMO ESTAS")}))})();
+(()=>{"use strict";window.addEventListener("hashchange",(()=>{console.log(window.location.hash)}))})();

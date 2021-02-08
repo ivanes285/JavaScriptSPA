@@ -4,7 +4,7 @@
   "description": "Esta es una aplicacion que aplica los fundamentos basicos de una SPA",
   "main": "index.js",
   "scripts": {
-    "dev":"webpack --mode development",
+    "dev": "webpack --mode development",
     "start": "webpack --mode production",
     "reset": "rimraf dist && webpack --mode production && webpack serve"
   },
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/ivanes285/JavaScriptSPA#readme",
   "devDependencies": {
+    "bootstrap": "^4.6.0",
     "css-loader": "^5.0.1",
     "express": "^4.17.1",
     "html-webpack-plugin": "^5.0.0",

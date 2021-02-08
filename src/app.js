@@ -1,6 +1,10 @@
-import "./main.css"
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./main.scss";   
+
+import {router} from './routes/index.routes'
 
 
-document.getElementById("message").addEventListener("click", () => {
-  alert("HOLA COMO ESTAS");
-});
+ window.addEventListener('hashchange',()=>{
+  router(window.location.hash)
+
+ })
