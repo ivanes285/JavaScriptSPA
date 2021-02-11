@@ -2,24 +2,32 @@
 //import Home from '../views/home'  
 
 //Esta es la segunda forma de importar en donde especifico lo que necesito
-import {home} from '../controllers/index.controller'
+import {pages} from '../controllers/index'
 
+let contenido = document.getElementById('root');
 
-const router = (route) => {
+const router = async (route) => {
   //Formateamos para que no se recargue encima 
-  document.getElementById('root').innerHTML=``
+  contenido.innerHTML=' ';
   switch (route) {
     case "#/":{
-     //document.getElementById('root').innerHTML+= Home()
-     document.getElementById('root').appendChild(home())
+      return contenido.appendChild(pages.home());
     }
-    case "#/products":
-      return console.log("products");
-    case "#/posts":
-      return console.log("posts");
-    default :
-    return console.log("Error 404 NOT FOUND")
+      
+    case "#/products":{
+      return contenido.appendChild(pages.products())
+    }
+     
+    case "#/posts":{
+      return contenido.appendChild( await pages.posts())
+    }
+     
+    default :{
+      return contenido.appendChild(pages.notFound())
+    }
+  
   }
 };
+
 
 export { router };
